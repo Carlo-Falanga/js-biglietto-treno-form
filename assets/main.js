@@ -1,10 +1,9 @@
-console.log("It works");
 
+// prendere elementi html e convertirli in variabili cosi da poterli gestire
 const formEl = document.querySelector("form");
 const nameEl = document.getElementById("name");
 const kmEl = document.getElementById("km");
 const ageEl = document.getElementById("age");
-
 
 
 formEl.addEventListener("submit", function (e) {
@@ -19,11 +18,11 @@ formEl.addEventListener("submit", function (e) {
   const priceKm = 0.21;
   const basePrice = km * priceKm;
 
-  if (age < 18) {
+  if (age === '1') {
     const minorDiscount = basePrice * 0.2;
     const minorDiscountTotal = basePrice - minorDiscount;
     console.log(minorDiscountTotal.toFixed(2));
-  } else if (age >= 65) {
+  } else if (age === '2') {
     const overDiscount = basePrice * 0.4;
     const overDiscountTotal = basePrice - overDiscount;
     console.log(overDiscountTotal.toFixed(2));
@@ -31,3 +30,5 @@ formEl.addEventListener("submit", function (e) {
     console.log(basePrice.toFixed(2));
   }
 });
+
+
