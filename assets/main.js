@@ -15,7 +15,6 @@ formEl.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // conversione in variabili i valori degli elementi
-  const name = nameEl.value;
   const km = kmEl.value;
   const age = ageEl.value;
 
