@@ -34,7 +34,7 @@ formEl.addEventListener("submit", function (e) {
     ticketNameEl.innerHTML = ticketNameValue
     ticketDiscountEl.innerHTML = 'Sconto del 20%'
     ticketCarriageEl.innerHTML = carriage
-    ticketPriceEl.innerHTML = minorDiscountTotal.toFixed(2)
+    ticketPriceEl.innerHTML = minorDiscountTotal.toFixed(2) + '\u20AC'
 
   } else if (age === "2") {
     const overDiscount = basePrice * 0.4;
@@ -42,11 +42,11 @@ formEl.addEventListener("submit", function (e) {
     ticketNameEl.innerHTML = ticketNameValue
     ticketDiscountEl.innerHTML = 'Sconto del 40%'
     ticketCarriageEl.innerHTML = carriage
-    ticketPriceEl.innerHTML = overDiscountTotal.toFixed(2)
+    ticketPriceEl.innerHTML = overDiscountTotal.toFixed(2) + '\u20AC'
   } else {
     ticketNameEl.innerHTML = ticketNameValue
     ticketDiscountEl.innerHTML = 'Prezzo standard'
     ticketCarriageEl.innerHTML = carriage
-    ticketPriceEl.innerHTML = basePrice.toFixed(2)
+    ticketPriceEl.innerHTML = basePrice.toFixed(2) + '\u20AC'
   }
 });
