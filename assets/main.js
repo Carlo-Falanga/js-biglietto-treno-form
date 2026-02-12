@@ -1,24 +1,33 @@
-console.log('It works');
+console.log("It works");
+
+const formEl = document.querySelector("form");
+const nameEl = document.getElementById("name");
+const kmEl = document.getElementById("km");
+const ageEl = document.getElementById("age");
 
 
 
+formEl.addEventListener("submit", function (e) {
+  e.preventDefault();
 
+// conversione in variabili i valori degli elementi
+  const name = nameEl.value;
+  const km = kmEl.value;
+  const age = ageEl.value;
+  console.log(name, km, age);
+  // calcolo del prezzo senza sconto
+  const priceKm = 0.21;
+  const basePrice = km * priceKm;
 
-const formEl = document.querySelector('form')
-const nameEl = document.getElementById('name')
-const kmEl = document.getElementById('km')
-const ageEl = document.getElementById('age')
-
-const priceKm = 0.21;
-const basePrice = kmEl * priceKm;
-
-
-formEl.addEventListener('submit', function(e){
-    e.preventDefault()
-
-    const name = nameEl.value;
-    const km = kmEl.value;
-    const age = ageEl.value;
-    console.log(name, km, age);
-    
-})
+  if (age < 18) {
+    const minorDiscount = basePrice * 0.2;
+    const minorDiscountTotal = basePrice - minorDiscount;
+    console.log(minorDiscountTotal.toFixed(2));
+  } else if (age >= 65) {
+    const overDiscount = basePrice * 0.4;
+    const overDiscountTotal = basePrice - overDiscount;
+    console.log(overDiscountTotal.toFixed(2));
+  }else{
+    console.log(basePrice.toFixed(2));
+  }
+});
