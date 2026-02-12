@@ -5,6 +5,11 @@ const nameEl = document.getElementById("name");
 const kmEl = document.getElementById("km");
 const ageEl = document.getElementById("age");
 
+const ticketNameEl = document.getElementById('ticketName')
+const ticketDiscountEl = document.querySelector('.ticketDiscount')
+const ticketCarriageEl = document.querySelector('.ticketCarriage')
+const ticketCodeEl = document.querySelector('.ticketCode')
+const ticketPriceEl = document.querySelector('.ticketPrice')
 
 formEl.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -14,6 +19,9 @@ formEl.addEventListener("submit", function (e) {
   const km = kmEl.value;
   const age = ageEl.value;
   console.log(name, km, age);
+
+
+  
   // calcolo del prezzo senza sconto
   const priceKm = 0.21;
   const basePrice = km * priceKm;
@@ -29,6 +37,10 @@ formEl.addEventListener("submit", function (e) {
   }else{
     console.log(basePrice.toFixed(2));
   }
+
+  
+
+
 });
 
 
