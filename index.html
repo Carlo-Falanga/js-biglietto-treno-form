@@ -14,38 +14,85 @@
   </head>
   <body>
     <main>
-      <section class="container pt-5">
+      <section class="container">
+        <div class="text-center my-5"><h2>Inserisci i tuoi dati</h2></div>
         <form action="">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name and Username"
-          />
-          <input type="text" name="km" id="km" placeholder="Km to travel" />
-          <select id="age" class="form-select" aria-label="Default select example">
-            <option selected>Seleziona la tua fascia di eta'</option>
-            <option value="1">Minorenne</option>
-            <option value="2">Over 65</option>
-            <option value="3">Nessuno dei due</option>
-          </select>
-          <div class="pt-4">
-            <button type="submit" class="btn btn-primary">Genera</button>
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 bg-primary rounded-4 p-5 shadow d-flex align-items-center"
+          >
+            <div class="col">
+              <label for="" class="form-label text-white fw-medium">Nome e Cognome</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                placeholder="Name and Username"
+              />
+            </div>
+            <div class="col">
+              <label for="" class="form-label text-white fw-medium">Km da percorrere</label>
+              <input
+                type="text"
+                class="form-control"
+                name="km"
+                id="km"
+                placeholder="Km to travel"
+              />
+            </div>
+
+            <div class="col">
+              <label for="" class="form-label text-white fw-medium">Fascia di eta'</label>
+              <select
+                id="age"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option selected>Seleziona la tua fascia di eta'</option>
+                <option value="1">Minorenne</option>
+                <option value="2">Over 65</option>
+                <option value="3">Nessuno dei due</option>
+              </select>
+            </div>
+
+            <div class="col-lg-12 text-center text-md-start text-lg-end">
+              <button
+                type="submit"
+                class="btn btn-outline-light border border-2"
+              >
+                Genera
+              </button>
+            </div>
           </div>
         </form>
       </section>
 
       <section class="container">
-        <h2 class="text-center py-4">Il tuo biglietto</h2>
+        <h2 class="text-center mt-5">Il tuo biglietto</h2>
         <div class="row">
-            <div class="col"><h3>Dettaglio passeggeri</h3></div>
+          <div class="col"><h3>Dettaglio passeggeri</h3></div>
         </div>
         <div class="row py-2">
-          <div class="col-4 bg-secondary-subtle p-3"><h3>Nome passeggero</h3><span id="ticketName" class="fw-bold fs-5">Il tuo nome</span></div>
-          <div class="col fw-bold p-3">Offerta <p id="ticketDiscount" class="fw-medium pt-5">Tipo di offerta</p></div>
-          <div class="col fw-bold p-3">Carrozza<p id="ticketCarriage" class="fw-medium pt-5">Numero</p></div>
-          <div class="col fw-bold p-3">Codice CP<p id="ticketCode" class="fw-medium pt-5">92911</p></div>
-          <div class="col fw-bold p-3">Costo biglietto<p id="ticketPrice" class="fw-medium pt-5">Prezzo</p></div>
+          <div class="col-4 bg-secondary-subtle p-3">
+            <h3>Nome passeggero</h3>
+            <span id="ticketName" class="fw-bold fs-5">Il tuo nome</span>
+          </div>
+          <div class="col fw-bold p-3">
+            Offerta
+            <p id="ticketDiscount" class="fw-medium pt-5">Tipo di offerta</p>
+          </div>
+          <div class="col fw-bold p-3">
+            Carrozza
+            <p id="ticketCarriage" class="fw-medium pt-5">Numero</p>
+          </div>
+          <div class="col fw-bold p-3">
+            Codice CP
+            <p id="ticketCode" class="fw-medium pt-5">92911</p>
+          </div>
+          <div class="col fw-bold p-3">
+            Costo biglietto
+            <p id="ticketPrice" class="fw-medium pt-5">Prezzo</p>
+          </div>
         </div>
       </section>
     </main>
